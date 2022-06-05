@@ -53,3 +53,46 @@ console.log(aaron.hasOwnProperty("nombre")); //True
 
 
 
+
+
+
+
+//// Objetos Literales ////
+
+/**
+ * Se utilizan variables externas para crear un objeto
+ */
+
+let nombre = "Brian",
+   edad = 5;
+
+const perro = {
+   nombre: nombre,
+   edad: edad,
+   ladrar: function(){
+      console.log("guauu guauu!!!");
+   }
+}
+
+console.log(perro);
+perro.ladrar();
+
+/**
+ * Con emaescript se puede poner solo el nombre de la variable, también  cambia la forma de declarar la funcion
+ */
+
+//Ejemplo
+
+const dog = {
+   nombre,
+   edad,
+   raza: "callejero",
+   ladrar(){
+      console.log("guauu guauu guauu!!!")
+   }
+}
+
+console.log(dog);
+dog.ladrar();
+
+

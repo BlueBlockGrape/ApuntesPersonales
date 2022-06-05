@@ -72,3 +72,48 @@ const funcionExpresada = function() {
 }
 
 
+//// Arrow Functions ////
+
+/**
+ * Se utilizan para funciones expresadas, también se puede utilizar en foreach
+ */
+
+// Existen variasformas de declararlas, si no hay parametros se deben poner los parentesis
+const saludar = () =>console.log(`Hola`);
+saludar();
+
+//Si solo recibe un parametro puede o no utilizar los parentesis
+
+const saludar1 = (nombre) => console.log(`Hola ${nombre}`);
+saludar1('Aaron');
+
+const saludar2 = nombre => console.log(`Hola ${nombre}`);
+saludar2();
+
+//ejemplo de una función "normal" y una arrow function
+
+const sumar = function (a,b){
+   return a+b;
+}
+
+const sumar1 = (a,b) => a + b; //en este caso no se ocupa return porque es solo una línea
+console.log(sumar(9,9));
+
+const funcionDeVariasLineas = () => {
+   console.log("uno");
+   console.log("dos");
+   console.log("tres");
+}
+funcionDeVariasLineas();
+
+
+//Ejemplo con foreach
+
+const numeros = [1,2,3,4,5];
+
+numeros.forEach((el,index) => console.log(`${el} esta en la posicion ${index}`));
+
+/**
+ * Nota, intentar no uitlizar las arrow function en objetos
+ * literales porque se saltan el contexto al usar la palbra this.
+ */
